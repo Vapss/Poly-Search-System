@@ -1,0 +1,873 @@
+/* VARIABLES */
+
+:root {
+    --r3d: #FF4500;
+    --dark: #0F1618;
+}
+
+/* GENERAL */
+html {
+    overflow: scroll;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial;
+    background-color: #EDEDED;
+}
+
+p, td, th {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.page-title {
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.page-center {
+    display: table;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.page-start {
+    display: table;
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.small-nav {
+    display: none;
+}
+
+.youtube-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* LINKS */
+a {
+    color: #FF4500;
+}
+
+a:hover, a:focus {
+    color: rgba(255, 69, 0, 0.75);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* BUTTONS */
+
+.btn-container {
+    padding: 50px;
+}
+
+.btn {
+    background-color: #0F1618;
+    color: white;
+    border-radius: 300px;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+
+.btn-text {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+}
+
+.btn:hover, .btn:focus {
+    background: #FF4500;
+}
+
+.btn-general {
+    background-color: #0F1618;
+    height: 20px;
+    width: 20%;
+    margin: 10px 0px;
+}
+
+.forum-buttons {
+    float: right;
+}
+
+.general-btn {
+    background-color: #0F1618;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 10px 14px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.general-btn:hover {
+    color: white;
+}
+
+
+/* HEADER */
+
+.page-top {
+    height: 100px;
+    width: 100%;
+}
+
+.page-top .page-logo {
+    height: 100%;
+    width: 200px;
+    float: left;
+    position: relative;
+    line-height: 100px;
+    text-align: center;
+}
+
+.page-top .page-logo img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.page-top .page-top-links {
+    height: 100%;
+    width: 20%;
+    float: right;
+    position: relative;
+    line-height: 100px;
+    text-align: center;
+}
+
+.page-top .page-top-links a {
+     vertical-align: middle;
+     float: right;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    background-color: rgb(104, 36, 68);
+}
+
+.navlinks {
+    font-family: 'Calibri';
+    width: 60%;
+    margin: 0 auto;
+}
+
+.navlinks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navlinks li {
+    float: left;
+}
+
+.navlinks li a {
+    display: block;
+    
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    color: #f3de8c;
+}
+
+.navlinks li a:hover {
+    background: #aa431b;
+}
+
+.navlinks .left {
+    float: left;
+}
+
+.kickstarter {
+    color: #16DF6F;
+}
+
+.navlinks .right {
+    float: right;
+}
+
+.dropbtn {
+    color: white;
+    cursor: pointer;
+}
+
+.bottom-line {
+    height: 2px;
+    background-color: #dea995;
+}
+
+
+/* SIDE NAV */
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: rgb(104, 36, 68); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav img {
+    width: 100%;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 14px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f3de8c;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    font-size: 36px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* IMAGE HEADER */
+
+.image-header {
+    background: url("../media/images/bigscreen.jpg") no-repeat center;
+}
+
+.header-content {
+    color: white;
+    text-align: center;
+    font-family: "Quicksand";
+    line-height: 400px;
+    font-size: 7vw;
+}
+
+/* VIDEO HEADER */
+
+.video-content {
+    height: 400px;
+    width: auto;
+    overflow: hidden;
+}
+
+.videoframe {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* FOOTER */
+
+.page-footer {
+    font-family: 'Calibri';
+    text-align: center;
+}
+
+.page-footer .contact p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.page-footer .small-print {
+    padding: 43px 0 10px;
+    font-weight: 300;
+}
+
+/* FORUM */
+
+.forum table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.forum th, .forum td {
+    padding: 8px;
+}
+
+.forum tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.forum th {
+    height: 50px;
+    background-color: #FF4500;
+    color: white;
+}
+
+.forum tr td {
+    height: 80px;
+}
+
+.forum tr .forum-icon img {
+    width: 20px;
+}
+
+/* THREAD */
+
+.thread-title {
+    font-family: 'Quicksand';
+}
+
+.thread {
+    border-collapse: collapse;
+    border: 1px solid lightgrey;
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.thread th, .thread td {
+    padding: 8px;
+}
+
+.thread th {
+    height: 20px;
+    background-color: grey;
+    color: white;
+}
+
+.thread tr td {
+    border: 1px solid lightgrey;
+}
+
+.thread .post-profile {
+    width: 6%;
+    vertical-align: top;
+}
+
+.thread .post-profile a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.thread .post-profile img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.thread .post-banner img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.thread .post-buttons {
+    height: 30px;
+    width: 30%;
+}
+
+.thread .post-buttons a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CREATE THREAD */
+.create-thread {
+    width: 100%;
+}
+
+.create-thread form {
+    width: 100%;
+}
+
+.create-thread form p {
+    font-weight: bold;
+}
+
+.create-thread form input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.create-thread form .textarea-box {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.create-thread form textarea {
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* CREATE post */
+.create-post {
+    width: 100%;
+}
+
+.create-post form {
+    width: 100%;
+}
+
+.create-post form p {
+    font-weight: bold;
+}
+
+.create-post form input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.create-post form .textarea-box {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.create-post form textarea {
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.create-post input[type=submit] {
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    border-width: 0px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.create-post input[type=submit]:hover {
+    background-color: #FF4500;
+}
+
+
+/* IMAGES */
+.image-thumbnail {
+    padding-bottom: 20px;
+}
+
+.image-nav {
+    padding-top: 5px;
+}
+
+
+.image-nav input[type=submit] {
+    font-size: 12px;
+    color: white;
+    background-color: grey;
+    text-transform: uppercase;
+    border-width: 0px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.image-nav input[type=submit]:hover {
+    background-color: dimgrey;
+}
+
+.image-bullets {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image-bullets a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-bullets span {
+    font-size: 30px;
+    color: gray;
+}
+
+.image-bullets .active {
+    color: black;
+}
+
+.image-bullets span:hover {
+    color: #FF4500;
+}
+
+/* FAQ */
+
+.faq-block {
+    margin: 10px;
+    outline: 1px solid lightgray;
+    padding: 10px 25px;
+}
+
+.faq-title {
+    cursor: pointer;
+    color: #FF4500;
+}
+
+.faq-body {
+    display: table;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 95%;
+}
+
+.faq-body iframe {
+    display:block;
+    width:100%;
+}
+
+.faq-block .code-block {
+    font-family: 'Courier New';
+    padding: 25px;
+    background-color: rgba(254, 54, 0, 0.05);
+}
+
+/* DOWNLOAD */
+
+
+.download-title {
+    cursor: pointer;
+    color: #FF4500;
+}
+
+.download-table {
+    width: 100%;
+}
+
+.download-table th, .download-table td {
+    padding: 5px;
+    text-align: left;
+}
+
+.download-table tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.download-table th {
+    height: 10px;
+    background-color: grey;
+    color: white;
+}
+
+
+/* SIGN UP / SIGN IN */
+
+.signup, .signin {
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.signup form, .signin form {
+    width: 100%;
+}
+
+.signup form input, .signin form input {
+    width: 80%;
+    height: 50px;
+    outline: none;
+}
+
+.signup input[type=text], .signup input[type=password], .signin input[type=text], .signin input[type=password] {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup input[type=submit], .signin input[type=submit] {
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    border-width: 0px;
+    cursor: pointer;
+    background-color: #FF4500;
+}
+
+#login-error {
+    background-color: #ffdbdb;
+    color: red;
+    padding: 20px;
+}
+
+#login-php-error {
+    background-color: #ffdbdb;
+    color: red;
+    padding: 20px;
+}
+
+.verify-success {
+    background-color: #bbffb0;
+    color: green;
+    padding: 20px;
+}
+
+.verify-success p {
+    text-align: center;
+}
+
+/* PROFILE */
+
+.profile-page-info td {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.profile-page-info .profile-page-picture {
+    padding: 0px;
+    width: 20%;
+}
+
+.profile-page-info .profile-page-picture img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* USER SETTINGS */
+.user-settings {
+    width: 100%;
+}
+
+.user-settings-container {
+    border: 1px solid grey;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.profile-picture {
+    width: 25%;
+}
+
+.profile-picture img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.user-settings form {
+    width: 40%;
+}
+
+.user-settings form p {
+    font-weight: bold;
+}
+
+.user-settings form input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.user-settings form .textarea-box {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.user-settings form textarea {
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding : 10px;
+}
+
+.user-settings select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.user-settings input[type=text], .user-settings input[type=password] {
+    margin-bottom: 20px;
+}
+
+.user-settings input[type=submit] {
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    border-width: 0px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.user-settings input[type=submit]:hover {
+    background-color: #FF4500;
+}
+
+#password-php-success {
+    background-color: #ffdbdb;
+    color: green;
+    padding: 20px;
+}
+
+#password-change-error, #password-php-error {
+    background-color: #ffdbdb;
+    color: red;
+    padding: 20px;
+}
+
+#settings-php-success {
+    background-color: #bbffb0;
+    color: green;
+    padding: 20px;
+}
+
+#settings-change-error, #settings-php-error {
+    background-color: #ffdbdb;
+    color: red;
+    padding: 20px;
+}
+
+/* ALL USERS TABLE */
+
+.compact-table {
+    width: 100%;
+    text-align: left;
+}
+
+.compact-table th, .compact-table td {
+    padding: 8px;
+}
+
+.compact-table tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.compact-table th {
+    height: 20px;
+    background-color: orangered;
+    color: white;
+}
+
+.compact-table tr td {
+    height: 20px;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1300px) {
+    .page-center {
+        width: 80%;
+    }
+
+    .page-start {
+        width: 80%;
+    }
+
+    .navlinks {
+        width: 80%;
+    }
+
+    .header-content {
+        line-height: 300px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .page-center {
+        width: 100%;
+    }
+
+    .page-start {
+        width: 90%;
+    }
+
+    .navlinks {
+        width: 100%;
+    }
+
+    .page-top .page-logo {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .header-content {
+        line-height: 200px;
+    }
+
+    .small-screen-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .small-nav {
+        display: block;
+    }
+
+    .big-nav {
+        display: none;
+    }
+
+    .header-content {
+        line-height: 100px;
+    }
+}
